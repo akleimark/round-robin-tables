@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Illegal number of arguments."
+    echo "Usage: round-robin --print [n]" 
+    exit -1
+fi
+
+dir="$(pwd)"
+file=$dir/tables/tables$2.pdf
+
+if [ $1 == "--print" ] && [ -f $file ]; then    
+    lp $file
+else
+    echo "Illegal arguments."
+    exit -1
+fi
+
+
