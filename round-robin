@@ -6,7 +6,7 @@ if [ "$#" -ne 2 ]; then
     exit -1
 fi
 
-dir="$(pwd)"
+dir="/usr/local/bin/RoundRobinTables"
 file=$dir/tables/tables$2.pdf
 
 if [ $1 == "--print" ] && [ -f $file ]; then    
